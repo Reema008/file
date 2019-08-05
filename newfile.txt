@@ -1,0 +1,41 @@
+  method: "POST",
+    path: "/get/leaves",
+    handler: async (req, h) => {
+      console.log("payload", req.payload);
+
+      let rs;
+
+      console.log(knex('xldata').insert(data).toQuery(), "toQuery()";
+      
+
+      await knex('xldata').insert(data)
+
+      // await knex.raw(
+      //   `INSERT INTO xldata (id, sno, bugSummary, status) VALUES (NULL, '1', 'wdwadawd', 'adasd')`)
+        .then(
+        async ([results]) => {
+          console.log("db query";
+          // connection.release();
+          // Handle error after the release
+        
+            // else callback(null,results);
+            console.log(results);
+            console.log("result testing!";
+            rs = await {
+              success: true,
+            };          
+        }
+      .catch(error=>{
+          console.log('error in catch', error);
+          
+        if (error) {
+            rs = {
+              success: false,
+              message: "Failed to complete task"
+            };
+          } 
+      });
+
+      return rs;
+    }
+  }
